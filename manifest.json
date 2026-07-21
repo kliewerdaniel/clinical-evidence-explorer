@@ -1,0 +1,11 @@
+{
+  "name": "Clinical Evidence Explorer",
+  "generated_from": "clinical-knowledge-artifact",
+  "renders": [
+    "overview",
+    "treatments",
+    "conflicts",
+    "guideline",
+    "sources"
+  ]
+}
