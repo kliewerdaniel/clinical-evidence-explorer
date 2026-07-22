@@ -31,7 +31,7 @@ export default function TreatmentsView() {
               {t.class && <Text type="supporting"><span style={{color:'var(--color-text-secondary,#687076)'}}>Class: </span>{t.class}</Text>}
               {t.indication && <Text type="supporting"><span style={{color:'var(--color-text-secondary,#687076)'}}>Indication: </span>{t.indication}</Text>}
               {t.population && <Text type="supporting"><span style={{color:'var(--color-text-secondary,#687076)'}}>Population: </span>{t.population}</Text>}
-              {ev.recommendation && <div style={{borderLeft:'3px solid var(--color-border-accent,#3b82f6)', background:'var(--color-background-muted,#f1f3f5)', padding:8, borderRadius:6, marginTop:4}}>{ev.recommendation}</div>}
+              {ev.recommendation && <div style={{borderLeft:'3px solid var(--color-border-accent,#3b82f6)', background:'var(--color-background-muted,#1b1f24)', color:'var(--color-text-primary,#fafafa)', padding:8, borderRadius:6, marginTop:4}}>{ev.recommendation}</div>}
               {ev.score!=null && <Text type="supporting" color="secondary" style={{marginTop:4}}>Evidence score: {Math.round(ev.score*100)}%</Text>}
               {t.guideline_refs?.length>0 && <div style={{display:'flex', flexWrap:'wrap', gap:4, marginTop:4}}>{t.guideline_refs.map((r,k)=><Badge key={k} variant="neutral" label={r} />)}</div>}
               {t.source_ids?.length>0 && <Text type="supporting" color="secondary" style={{fontSize:12, marginTop:4}}>sources: {t.source_ids.join(', ')}</Text>}

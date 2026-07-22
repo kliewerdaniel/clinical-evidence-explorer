@@ -33,8 +33,8 @@ export default function GuidelineView() {
           {chs.map((c,i)=>(
             <Card key={i} variant="default" style={{padding:16}}>
               <Heading level={3}>{c.topic}</Heading>
-              <div style={{marginTop:8, borderLeft:'3px solid var(--color-border-error,#ef4444)', background:'var(--color-background-error,#fef2f2)', padding:8, borderRadius:6}}>From: {c.from}</div>
-              <div style={{marginTop:6, borderLeft:'3px solid var(--color-border-success,#22c55e)', background:'var(--color-background-success,#f0fdf4)', padding:8, borderRadius:6}}>To: {c.to}</div>
+              <div style={{marginTop:8, borderLeft:'3px solid var(--color-border-error,#ef4444)', background:'var(--color-background-error,#2a1416)', color:'var(--color-text-primary,#fafafa)', padding:8, borderRadius:6}}>From: {c.from}</div>
+              <div style={{marginTop:6, borderLeft:'3px solid var(--color-border-success,#22c55e)', background:'var(--color-background-success,#10251a)', color:'var(--color-text-primary,#fafafa)', padding:8, borderRadius:6}}>To: {c.to}</div>
               {c.rationale && <Text type="supporting" color="secondary" style={{display:'block', marginTop:8}}>{c.rationale}</Text>}
             </Card>
           ))}

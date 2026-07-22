@@ -15,7 +15,7 @@ export default function ConflictsView() {
             <Badge variant={sevVariant(c.severity)} label={c.kind} />
             <Text type="supporting" color="secondary" style={{fontSize:12}}>severity: {c.severity}</Text>
           </div>
-          <div style={{marginTop:8, borderLeft:'3px solid var(--color-border-error,#ef4444)', background:'var(--color-background-error,#fef2f2)', padding:8, borderRadius:6}}>
+          <div style={{marginTop:8, borderLeft:'3px solid var(--color-border-error,#ef4444)', background:'var(--color-background-error,#2a1416)', color:'var(--color-text-primary,#fafafa)', padding:8, borderRadius:6}}>
             <span style={{fontWeight:600}}>{c.treatment_a}</span>{c.treatment_b && <span> <span style={{color:'var(--color-text-secondary,#687076)'}}>vs</span> <span style={{fontWeight:600}}>{c.treatment_b}</span></span>}
           </div>
           {c.detail && <Text type="supporting" color="secondary" style={{display:'block', marginTop:8}}>{c.detail}</Text>}
