@@ -3,4 +3,10 @@
 @import "@astryxdesign/theme-neutral/theme.css";
 
 html, body { height: 100%; margin: 0; }
-body { background: var(--color-background-page, #f6f7f9); }
+/* Astryx 'neutral' theme is a dark theme (white text). Do NOT force a
+   light page background or body text becomes unreadable (white on light).
+   Use the theme tokens, with a dark fallback so the page is always legible. */
+body {
+  background: var(--color-background-page, #0f1115);
+  color: var(--color-text-primary, #fafafa);
+}
