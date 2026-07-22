@@ -1,7 +1,7 @@
 {
   "schema": "clinical-knowledge-artifact/1.0",
   "objective": "Type 2 diabetes management",
-  "generated_at": "2026-07-21T22:38:01.523871+00:00",
+  "generated_at": "2026-07-22T00:49:27.798216+00:00",
   "graphs": {
     "entity_graph": {
       "nodes": [
@@ -13,11 +13,21 @@
         {
           "id": "entity-2",
           "label": "Metformin",
-          "type": "system"
+          "type": "medication"
         },
         {
-          "id": "entity-3",
-          "label": "SGLT2 Inhibitors",
+          "id": "ent-1",
+          "label": "SGLT2 inhibitor",
+          "type": "concept"
+        },
+        {
+          "id": "ent-2",
+          "label": "Managing Diabetes",
+          "type": "concept"
+        },
+        {
+          "id": "ent-3",
+          "label": "Type 2 Diabetes Treatments",
           "type": "concept"
         }
       ],
@@ -26,12 +36,12 @@
     "concept_graph": {
       "nodes": [
         {
-          "id": "concept-1",
+          "id": "entity-1",
           "label": "Type 2 Diabetes"
         },
         {
-          "id": "concept-2",
-          "label": "Metformin"
+          "id": "ent-1",
+          "label": "SGLT2 inhibitor"
         }
       ],
       "edges": []
@@ -46,57 +56,93 @@
         },
         {
           "from": "doc-10",
+          "to": "src-3",
+          "type": "cites",
+          "url": "https://professional.heart.org/en/clinical-topics/diabetes"
+        },
+        {
+          "from": "doc-11",
+          "to": "src-4",
+          "type": "cites",
+          "url": "https://emedicine.medscape.com/article/117853-treatment"
+        },
+        {
+          "from": "doc-12",
+          "to": "src-5",
+          "type": "cites",
+          "url": "https://en.wikipedia.org/wiki/Metformin"
+        },
+        {
+          "from": "doc-13",
+          "to": "src-6",
+          "type": "cites",
+          "url": "https://en.wikipedia.org/wiki/SGLT2_inhibitor"
+        },
+        {
+          "from": "doc-14",
+          "to": "src-7",
+          "type": "cites",
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes"
+        },
+        {
+          "from": "doc-15",
+          "to": "src-8",
+          "type": "cites",
+          "url": "https://www.webmd.com/diabetes/type-2-diabetes-treatments"
+        },
+        {
+          "from": "doc-16",
           "to": "src-9",
           "type": "cites",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481754/"
+          "url": "https://diabetes.org/tools-resources/patients-standards-care"
         },
         {
           "from": "doc-2",
           "to": "src-10",
           "type": "cites",
-          "url": "https://www.emjreviews.com/wp-content/uploads/2025/10/Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf"
-        },
-        {
-          "from": "doc-3",
-          "to": "src-2",
-          "type": "cites",
-          "url": "https://en.wikipedia.org/wiki/Metformin"
-        },
-        {
-          "from": "doc-4",
-          "to": "src-3",
-          "type": "cites",
-          "url": "https://en.wikipedia.org/wiki/SGLT2_inhibitor"
-        },
-        {
-          "from": "doc-5",
-          "to": "src-4",
-          "type": "cites",
-          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes"
-        },
-        {
-          "from": "doc-6",
-          "to": "src-5",
-          "type": "cites",
-          "url": "https://www.webmd.com/diabetes/type-2-diabetes-treatments"
-        },
-        {
-          "from": "doc-7",
-          "to": "src-6",
-          "type": "cites",
-          "url": "https://diabetes.org/tools-resources/patients-standards-care"
-        },
-        {
-          "from": "doc-8",
-          "to": "src-7",
-          "type": "cites",
           "url": "https://professional.diabetes.org/sites/dpro/files/2024-08/OTI-Diabetes-Care-and-Management-Plan-Guide-FNL.pdf"
         },
         {
-          "from": "doc-9",
-          "to": "src-8",
+          "from": "doc-3",
+          "to": "src-11",
           "type": "cites",
           "url": "https://pro.aace.com/clinical-guidance/diabetes"
+        },
+        {
+          "from": "doc-4",
+          "to": "src-12",
+          "type": "cites",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481754/"
+        },
+        {
+          "from": "doc-5",
+          "to": "src-13",
+          "type": "cites",
+          "url": "https://www.emjreviews.com/wp-content/uploads/2025/10/Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf"
+        },
+        {
+          "from": "doc-6",
+          "to": "src-14",
+          "type": "cites",
+          "url": "https://www.emjreviews.com/diabetes/article/editors-pick-treatment-of-type-2-diabetes-a-comprehensive-review-of-recent-improvements-therapeutic-strategies-challenges-and-future-perspectives-j040125/"
+        },
+        {
+          "from": "doc-7",
+          "to": "src-15",
+          "type": "cites",
+          "url": "https://www.ovid.com/jnls/jmso/fulltext/10.4103/jms.jms_20_24~recent-advances-in-the-management-of-type-2-diabetes"
+        },
+        {
+          "from": "doc-8",
+          "to": "src-16",
+          "type": "cites",
+          "url": "https://professional.diabetes.org/standards-of-care"
+        },
+        {
+          "from": "doc-9",
+          "to": "src-2",
+          "type": "cites",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes"
         }
       ]
     }
@@ -114,68 +160,8 @@
     },
     {
       "doc_id": "doc-2",
-      "title": "Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf",
-      "source_id": "src-10",
-      "url": "https://www.emjreviews.com/wp-content/uploads/2025/10/Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf",
-      "domain": "www.emjreviews.com",
-      "authority": 0.7,
-      "word_count": 6639,
-      "section_count": 1
-    },
-    {
-      "doc_id": "doc-3",
-      "title": "Metformin - Wikipedia",
-      "source_id": "src-2",
-      "url": "https://en.wikipedia.org/wiki/Metformin",
-      "domain": "en.wikipedia.org",
-      "authority": 0.82,
-      "word_count": 15662,
-      "section_count": 42
-    },
-    {
-      "doc_id": "doc-4",
-      "title": "SGLT2 inhibitor - Wikipedia",
-      "source_id": "src-3",
-      "url": "https://en.wikipedia.org/wiki/SGLT2_inhibitor",
-      "domain": "en.wikipedia.org",
-      "authority": 0.82,
-      "word_count": 5950,
-      "section_count": 13
-    },
-    {
-      "doc_id": "doc-5",
-      "title": "Managing Diabetes - NIDDK",
-      "source_id": "src-4",
-      "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes",
-      "domain": "www.niddk.nih.gov",
-      "authority": 0.93,
-      "word_count": 3326,
-      "section_count": 30
-    },
-    {
-      "doc_id": "doc-6",
-      "title": "Type 2 Diabetes Treatments: Medication, Insulin, Weight Loss, More",
-      "source_id": "src-5",
-      "url": "https://www.webmd.com/diabetes/type-2-diabetes-treatments",
-      "domain": "www.webmd.com",
-      "authority": 0.55,
-      "word_count": 2833,
-      "section_count": 13
-    },
-    {
-      "doc_id": "doc-7",
-      "title": "A Guide for People with Type 2 Diabetes | American Diabetes Association",
-      "source_id": "src-6",
-      "url": "https://diabetes.org/tools-resources/patients-standards-care",
-      "domain": "diabetes.org",
-      "authority": 0.9,
-      "word_count": 189,
-      "section_count": 3
-    },
-    {
-      "doc_id": "doc-8",
       "title": "OTI-Diabetes-Care-and-Management-Plan-Guide-FNL.pdf",
-      "source_id": "src-7",
+      "source_id": "src-10",
       "url": "https://professional.diabetes.org/sites/dpro/files/2024-08/OTI-Diabetes-Care-and-Management-Plan-Guide-FNL.pdf",
       "domain": "professional.diabetes.org",
       "authority": 0.9,
@@ -183,9 +169,9 @@
       "section_count": 1
     },
     {
-      "doc_id": "doc-9",
+      "doc_id": "doc-3",
       "title": "Diabetes Guidelines and Algorithms | American Association of Clinical Endocrinology",
-      "source_id": "src-8",
+      "source_id": "src-11",
       "url": "https://pro.aace.com/clinical-guidance/diabetes",
       "domain": "pro.aace.com",
       "authority": 0.6,
@@ -193,28 +179,148 @@
       "section_count": 8
     },
     {
-      "doc_id": "doc-10",
+      "doc_id": "doc-4",
       "title": "Advances in the management of type 2 diabetes in adults - PMC",
-      "source_id": "src-9",
+      "source_id": "src-12",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481754/",
       "domain": "pmc.ncbi.nlm.nih.gov",
       "authority": 0.93,
       "word_count": 15308,
       "section_count": 44
+    },
+    {
+      "doc_id": "doc-5",
+      "title": "Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf",
+      "source_id": "src-13",
+      "url": "https://www.emjreviews.com/wp-content/uploads/2025/10/Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf",
+      "domain": "www.emjreviews.com",
+      "authority": 0.7,
+      "word_count": 6639,
+      "section_count": 1
+    },
+    {
+      "doc_id": "doc-6",
+      "title": "Editor's Pick: Treatment of Type 2 Diabetes: A Comprehensive Review of Recent Improvements, Therapeutic Strategies, Challenges, and Future Perspectives - European Medical Journal",
+      "source_id": "src-14",
+      "url": "https://www.emjreviews.com/diabetes/article/editors-pick-treatment-of-type-2-diabetes-a-comprehensive-review-of-recent-improvements-therapeutic-strategies-challenges-and-future-perspectives-j040125/",
+      "domain": "www.emjreviews.com",
+      "authority": 0.7,
+      "word_count": 6679,
+      "section_count": 22
+    },
+    {
+      "doc_id": "doc-7",
+      "title": "Recent advances in the management of type 2... : Journal of Medical Society",
+      "source_id": "src-15",
+      "url": "https://www.ovid.com/jnls/jmso/fulltext/10.4103/jms.jms_20_24~recent-advances-in-the-management-of-type-2-diabetes",
+      "domain": "www.ovid.com",
+      "authority": 0.6,
+      "word_count": 941,
+      "section_count": 9
+    },
+    {
+      "doc_id": "doc-8",
+      "title": "Standards of Care in Diabetes | ADA Clinical Guidelines",
+      "source_id": "src-16",
+      "url": "https://professional.diabetes.org/standards-of-care",
+      "domain": "professional.diabetes.org",
+      "authority": 0.9,
+      "word_count": 536,
+      "section_count": 7
+    },
+    {
+      "doc_id": "doc-9",
+      "title": "Diabetes",
+      "source_id": "src-2",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+      "domain": "www.who.int",
+      "authority": 0.97,
+      "word_count": 1353,
+      "section_count": 12
+    },
+    {
+      "doc_id": "doc-10",
+      "title": "- Not Found - Professional Heart Daily | American Heart Association",
+      "source_id": "src-3",
+      "url": "https://professional.heart.org/en/clinical-topics/diabetes",
+      "domain": "professional.heart.org",
+      "authority": 0.45,
+      "word_count": 59,
+      "section_count": 3
+    },
+    {
+      "doc_id": "doc-11",
+      "title": "Type 2 Diabetes Mellitus Treatment & Management: Approach Considerations, Pharmacologic Treatment, Management of Glycemia",
+      "source_id": "src-4",
+      "url": "https://emedicine.medscape.com/article/117853-treatment",
+      "domain": "emedicine.medscape.com",
+      "authority": 0.72,
+      "word_count": 23749,
+      "section_count": 61
+    },
+    {
+      "doc_id": "doc-12",
+      "title": "Metformin - Wikipedia",
+      "source_id": "src-5",
+      "url": "https://en.wikipedia.org/wiki/Metformin",
+      "domain": "en.wikipedia.org",
+      "authority": 0.82,
+      "word_count": 15662,
+      "section_count": 42
+    },
+    {
+      "doc_id": "doc-13",
+      "title": "SGLT2 inhibitor - Wikipedia",
+      "source_id": "src-6",
+      "url": "https://en.wikipedia.org/wiki/SGLT2_inhibitor",
+      "domain": "en.wikipedia.org",
+      "authority": 0.82,
+      "word_count": 5950,
+      "section_count": 13
+    },
+    {
+      "doc_id": "doc-14",
+      "title": "Managing Diabetes - NIDDK",
+      "source_id": "src-7",
+      "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes",
+      "domain": "www.niddk.nih.gov",
+      "authority": 0.93,
+      "word_count": 3326,
+      "section_count": 30
+    },
+    {
+      "doc_id": "doc-15",
+      "title": "Type 2 Diabetes Treatments: Medication, Insulin, Weight Loss, More",
+      "source_id": "src-8",
+      "url": "https://www.webmd.com/diabetes/type-2-diabetes-treatments",
+      "domain": "www.webmd.com",
+      "authority": 0.55,
+      "word_count": 2833,
+      "section_count": 13
+    },
+    {
+      "doc_id": "doc-16",
+      "title": "A Guide for People with Type 2 Diabetes | American Diabetes Association",
+      "source_id": "src-9",
+      "url": "https://diabetes.org/tools-resources/patients-standards-care",
+      "domain": "diabetes.org",
+      "authority": 0.9,
+      "word_count": 189,
+      "section_count": 3
     }
   ],
   "claims": [
     {
       "confidence": 0.9,
-      "doc_id": "doc-1",
+      "doc_id": "src-1",
       "entity_refs": [],
       "id": "clm-1",
-      "text": "Type 2 diabetes is a chronic metabolic disorder characterized by insulin resistance and impaired insulin secretion.",
+      "text": "Type 2 diabetes is a chronic and progressive cardiometabolic disorder.",
       "type": "fact"
     },
     {
       "confidence": 0.9,
-      "doc_id": "doc-1",
+      "doc_id": "src-1",
       "entity_refs": [],
       "id": "clm-2",
       "text": "The global prevalence of type 2 diabetes has reached alarming rates, with WHO estimating over 422 million adults were living with diabetes in 2014.",
@@ -222,282 +328,472 @@
     },
     {
       "confidence": 0.9,
-      "doc_id": "doc-2",
+      "doc_id": "src-1",
       "entity_refs": [],
       "id": "clm-3",
-      "text": "Type 2 diabetes is a chronic metabolic disorder characterized by insulin resistance and impaired insulin secretion.",
+      "text": "Type 2 diabetes is associated with a myriad of complications, including cardiovascular disease, neuropathy, nephropathy, and retinopathy.",
       "type": "fact"
     },
     {
       "confidence": 0.9,
-      "doc_id": "doc-3",
+      "doc_id": "src-2",
       "entity_refs": [],
       "id": "clm-4",
+      "text": "Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-2",
+      "entity_refs": [],
+      "id": "clm-5",
+      "text": "Hyperglycaemia, also called raised blood glucose or raised blood sugar, is a common effect of uncontrolled diabetes.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-2",
+      "entity_refs": [],
+      "id": "clm-6",
+      "text": "Type 2 diabetes affects how your body uses sugar (glucose) for energy.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-3",
+      "entity_refs": [],
+      "id": "clm-7",
+      "text": "The number of people living with diabetes rose from 200 million in 1990 to 830 million in 2022.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-3",
+      "entity_refs": [],
+      "id": "clm-8",
+      "text": "More than half of people living with diabetes did not take medication for their diabetes in 2022.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-4",
+      "entity_refs": [],
+      "id": "clm-9",
+      "text": "The goals in caring for patients with diabetes mellitus are to eliminate symptoms and to prevent, or at least slow, the development of complications.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-4",
+      "entity_refs": [],
+      "id": "clm-10",
+      "text": "Microvascular (ie, eye and kidney disease) risk reduction is accomplished through control of glycemia and blood pressure.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-4",
+      "entity_refs": [],
+      "id": "clm-11",
       "text": "Metformin is the main first-line medication for the treatment of type 2 diabetes.",
       "type": "fact"
     },
     {
       "confidence": 0.9,
-      "doc_id": "doc-4",
+      "doc_id": "src-5",
       "entity_refs": [],
-      "id": "clm-5",
+      "id": "clm-12",
+      "text": "Metformin is a biguanide anti-hyperglycemic agent.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "src-5",
+      "entity_refs": [],
+      "id": "clm-13",
+      "text": "Metformin works by decreasing glucose production in the liver, increasing the insulin sensitivity of body tissues.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "doc-13",
+      "entity_refs": [
+        "SGLT2 inhibitors"
+      ],
+      "id": "clm-1",
       "text": "SGLT2 inhibitors are a class of medications that inhibit sodium-glucose transport proteins in the nephron.",
       "type": "fact"
     },
     {
       "confidence": 0.9,
-      "doc_id": "doc-5",
-      "entity_refs": [],
-      "id": "clm-6",
-      "text": "The diabetes ABCs can help you manage your blood glucose, blood pressure, and cholesterol levels.",
+      "doc_id": "doc-13",
+      "entity_refs": [
+        "SGLT2 inhibitors"
+      ],
+      "id": "clm-2",
+      "text": "The foremost metabolic effect of SGLT2 inhibitors is to inhibit reabsorption of glucose in the kidney.",
       "type": "fact"
     },
     {
-      "confidence": 0.9,
-      "doc_id": "doc-6",
-      "entity_refs": [],
-      "id": "clm-7",
-      "text": "Metformin is a biguanide anti-hyperglycemic agent that works by decreasing glucose production in the liver.",
-      "type": "fact"
-    },
-    {
-      "confidence": 0.9,
-      "doc_id": "doc-7",
-      "entity_refs": [],
-      "id": "clm-8",
-      "text": "The American Diabetes Association (ADA) updates its Standards of Care in Diabetes annually.",
-      "type": "fact"
-    },
-    {
-      "confidence": 0.9,
-      "doc_id": "doc-8",
-      "entity_refs": [],
-      "id": "clm-9",
-      "text": "Your diabetes care team will help you develop a diabetes management plan that works for you.",
-      "type": "fact"
-    },
-    {
-      "confidence": 0.9,
-      "doc_id": "doc-9",
-      "entity_refs": [],
-      "id": "clm-10",
-      "text": "Advanced diabetes technology can potentially assist persons with diabetes to achieve glycemic targets.",
-      "type": "fact"
-    },
-    {
-      "confidence": 0.9,
-      "doc_id": "doc-10",
-      "entity_refs": [],
-      "id": "clm-11",
-      "text": "Comprehensive person-centred management of diabetes requires attention to glycaemic control and risk factors for cardiovascular disease.",
-      "type": "fact"
-    }
-  ],
-  "contradictions": [
-    {
-      "claim_a": "Type 2 diabetes is a chronic metabolic disorder characterized by insulin resistance and impaired insulin secretion.",
-      "claim_b": "Metformin is a biguanide anti-hyperglycemic agent that works by decreasing glucose production in the liver.",
       "confidence": 0.8,
-      "dimension": "fact",
-      "explanation": "These two claims describe different mechanisms of action for metformin, which may lead to confusion about how it works.",
-      "id": "con-1"
+      "doc_id": "doc-13",
+      "entity_refs": [
+        "gliflozins",
+        "type 2 diabetes"
+      ],
+      "id": "clm-3",
+      "text": "Apart from blood sugar control, gliflozins have been shown to provide significant cardiovascular benefit in people with type 2 diabetes.",
+      "type": "finding"
     },
     {
-      "claim_a": "Metformin is the main first-line medication for the treatment of type 2 diabetes.",
-      "claim_b": "SGLT2 inhibitors are a class of medications that inhibit sodium-glucose transport proteins in the nephron.",
       "confidence": 0.9,
-      "dimension": "recommendation",
-      "explanation": "These two claims recommend different classes of medications as first-line treatments, which may lead to confusion about the best course of action.",
-      "id": "con-2"
+      "doc_id": "doc-14",
+      "entity_refs": [
+        "diabetes"
+      ],
+      "id": "clm-4",
+      "text": "Diabetes can affect almost every part of your body, including your heart, eyes, kidneys, and nerves.",
+      "type": "fact"
     },
     {
-      "claim_a": "The diabetes ABCs can help you manage your blood glucose, blood pressure, and cholesterol levels.",
-      "claim_b": "Comprehensive person-centred management of diabetes requires attention to glycaemic control and risk factors for cardiovascular disease.",
-      "confidence": 0.7,
-      "dimension": "recommendation",
-      "explanation": "These two claims recommend different approaches to managing diabetes, which may lead to confusion about the best approach.",
-      "id": "con-3"
+      "confidence": 0.8,
+      "doc_id": "doc-14",
+      "entity_refs": [
+        "diabetes",
+        "ABCs"
+      ],
+      "id": "clm-5",
+      "text": "Managing your ABCs may lower your chances of having health problems from diabetes, such as a heart attack, stroke, kidney disease, blindness, and foot or leg amputations.",
+      "type": "finding"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "doc-15",
+      "entity_refs": [
+        "metformin"
+      ],
+      "id": "clm-6",
+      "text": "Metformin is a type of medication that tells your liver to make less glucose.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "doc-15",
+      "entity_refs": [
+        "sulfonylureas"
+      ],
+      "id": "clm-7",
+      "text": "Sulfonylureas tell your pancreas to make more insulin.",
+      "type": "fact"
+    },
+    {
+      "confidence": 0.9,
+      "doc_id": "doc-16",
+      "entity_refs": [
+        "American Diabetes Association"
+      ],
+      "id": "clm-8",
+      "text": "The American Diabetes Association updates its Standards of Care in Diabetes annually.",
+      "type": "fact"
     }
   ],
+  "contradictions": [],
   "timeline": [
     {
-      "confidence": 0.9,
-      "date": "2014",
-      "doc_id": "doc-3",
+      "confidence": 1.0,
+      "date": "1990",
+      "doc_id": "doc-9",
       "id": "ev-1",
-      "label": "WHO estimates over 422 million adults living with diabetes worldwide.",
-      "source_id": "src-2",
-      "type": "statement"
-    },
-    {
-      "confidence": 0.8,
-      "date": "2014",
-      "doc_id": "doc-4",
-      "id": "ev-2",
-      "label": "Several medications of the SGLT2 inhibitors class have been approved or are under development.",
+      "label": "Number of people living with diabetes rose from 200 million to 830 million",
       "source_id": "src-3",
-      "type": "statement"
+      "type": "event"
     },
     {
-      "confidence": 0.9,
-      "date": "2015",
-      "doc_id": "doc-4",
-      "id": "ev-3",
-      "label": "The FDA issues a warning that gliflozins can increase the risk of diabetic ketoacidosis (DKA).",
-      "source_id": "src-3",
-      "type": "statement"
-    },
-    {
-      "confidence": 0.9,
-      "date": "2015",
-      "doc_id": "doc-4",
-      "id": "ev-4",
-      "label": "The FDA issues a warning related to canagliflozin (Invokana) and canagliflozin/metformin (Invokamet) due to decreased bone mineral density.",
-      "source_id": "src-3",
-      "type": "statement"
-    },
-    {
-      "confidence": 0.8,
-      "date": "2017",
-      "doc_id": "doc-3",
-      "id": "ev-5",
-      "label": "Metformin is one of the top 10 most prescribed medications in Australia.",
-      "source_id": "src-2",
-      "type": "statement"
-    },
-    {
-      "confidence": 0.9,
-      "date": "2019",
-      "doc_id": "doc-7",
-      "id": "ev-6",
-      "label": "The American Diabetes Association (ADA) updates its Standards of Care in Diabetes annually.",
-      "source_id": "src-5",
-      "type": "statement"
-    },
-    {
-      "confidence": 0.8,
-      "date": null,
-      "doc_id": "doc-10",
-      "id": "ev-7",
-      "label": "The pattern of management of diabetes has shifted from a predominantly glucose centric approach to a directed complications centric approach.",
-      "source_id": "src-9",
-      "type": "statement"
-    },
-    {
-      "confidence": 0.9,
-      "date": "2021",
-      "doc_id": "doc-3",
-      "id": "ev-8",
-      "label": "The International Diabetes Federation (IDF) reports that 537 million adults have diabetes worldwide.",
-      "source_id": "src-2",
-      "type": "statement"
-    },
-    {
-      "confidence": 0.9,
+      "confidence": 1.0,
       "date": "2022",
-      "doc_id": "doc-4",
+      "doc_id": "doc-9",
+      "id": "ev-2",
+      "label": "Prevalence of diabetes rising more rapidly in low- and middle-income countries than high-income countries",
+      "source_id": "src-3",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "2022",
+      "doc_id": "doc-9",
+      "id": "ev-3",
+      "label": "More than half of people living with diabetes did not take medication for their diabetes",
+      "source_id": "src-3",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "2021",
+      "doc_id": "doc-9",
+      "id": "ev-4",
+      "label": "Diabetes and kidney disease due to diabetes caused over 2 million deaths",
+      "source_id": "src-3",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "2026",
+      "doc_id": "doc-11",
+      "id": "ev-5",
+      "label": "American Diabetes Association's (ADA) Standards of Care in Diabetes—2026 published",
+      "source_id": "src-4",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "2017",
+      "doc_id": "doc-8",
+      "id": "ev-6",
+      "label": "9 million people with type 1 diabetes worldwide, majority living in high-income countries",
+      "source_id": "src-16",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "2024",
+      "doc_id": "doc-9",
+      "id": "ev-7",
+      "label": "Number of people living with diabetes rose from 200 million in 1990 to 830 million in 2022",
+      "source_id": "src-3",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "2000",
+      "doc_id": "doc-9",
+      "id": "ev-8",
+      "label": "Mortality rates from diabetes have been increasing since 2000",
+      "source_id": "src-3",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-9",
       "id": "ev-9",
-      "label": "The American Diabetes Association (ADA) includes SGLT2 inhibitors as a first-line pharmacological therapy for type 2 diabetes.",
+      "label": "Type 2 diabetes can be prevented with a healthy diet, regular physical activity, maintaining a normal body weight and avoiding tobacco use",
       "source_id": "src-3",
       "type": "statement"
     },
     {
-      "confidence": 0.9,
-      "date": "2023",
-      "doc_id": "doc-7",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-9",
       "id": "ev-10",
-      "label": "The American Diabetes Association (ADA) updates its Standards of Care in Diabetes annually.",
-      "source_id": "src-5",
+      "label": "Diabetes can be treated and its consequences avoided or delayed with diet, physical activity, medication and regular screening and treatment for complications",
+      "source_id": "src-3",
       "type": "statement"
     },
     {
-      "confidence": 0.8,
-      "date": "2023",
-      "doc_id": "doc-10",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-12",
       "id": "ev-11",
-      "label": "The article 'Advances in the management of type 2 diabetes in adults' is published.",
-      "source_id": "src-9",
-      "type": "event"
+      "label": "Metformin is the main first-line medication for the treatment of type 2 diabetes, particularly in people who are overweight",
+      "source_id": "src-5",
+      "type": "statement"
     },
     {
-      "confidence": 0.9,
-      "date": "2024",
-      "doc_id": "doc-7",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-12",
       "id": "ev-12",
-      "label": "The American Diabetes Association (ADA) updates its Standards of Care in Diabetes annually.",
+      "label": "Metformin is generally well tolerated, but common adverse effects include diarrhea, nausea, and abdominal pain",
       "source_id": "src-5",
       "type": "statement"
     },
     {
-      "confidence": 0.8,
-      "date": "2024",
-      "doc_id": "doc-6",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-12",
       "id": "ev-13",
-      "label": "The article 'Type 2 Diabetes Treatments: Medication, Insulin, Weight Loss, More' is published.",
+      "label": "Metformin works by decreasing glucose production in the liver, increasing insulin sensitivity of body tissues, and increasing GDF15 secretion",
       "source_id": "src-5",
-      "type": "event"
+      "type": "statement"
     },
     {
-      "confidence": 0.9,
-      "date": "2024",
-      "doc_id": "doc-7",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-12",
       "id": "ev-14",
-      "label": "The American Diabetes Association (ADA) updates its Standards of Care in Diabetes annually.",
+      "label": "Metformin was first described in the scientific literature in 1922 by Emil Werner and James Bell, introduced as a medication in France in 1957",
       "source_id": "src-5",
       "type": "statement"
     },
     {
-      "confidence": 0.8,
-      "date": "2024",
-      "doc_id": "doc-7",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-12",
       "id": "ev-15",
-      "label": "The article 'A Guide for People with Type 2 Diabetes' is published.",
+      "label": "In 2023, metformin was the second most commonly prescribed medication in the United States, with more than 85 million prescriptions",
       "source_id": "src-5",
       "type": "event"
     },
     {
-      "confidence": 0.9,
-      "date": "2024",
-      "doc_id": "doc-7",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-12",
       "id": "ev-16",
-      "label": "The American Diabetes Association (ADA) updates its Standards of Care in Diabetes annually.",
+      "label": "The American Diabetes Association and the American College of Physicians both recommend metformin as a first-line agent for type 2 diabetes treatment",
       "source_id": "src-5",
       "type": "statement"
     },
     {
-      "confidence": 0.8,
-      "date": "2024",
-      "doc_id": "doc-9",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-12",
       "id": "ev-17",
-      "label": "The article 'Diabetes Guidelines and Algorithms' is published.",
-      "source_id": "src-8",
-      "type": "event"
+      "label": "Metformin is used to lower blood glucose in those with type 2 diabetes, and has also been used to help with metabolic abnormalities in polyendocrine metabolic ovarian syndrome (PMOS)",
+      "source_id": "src-5",
+      "type": "statement"
     },
     {
-      "confidence": 0.8,
-      "date": "2025",
-      "doc_id": "doc-2",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-11",
       "id": "ev-18",
-      "label": "The article 'Treatment of Type 2 Diabetes: A Comprehensive Review of Recent Improvements, Therapeutic Strategies, Challenges, and Future Perspectives' is published.",
-      "source_id": "src-10",
-      "type": "event"
+      "label": "The ADA's Standards of Care in Diabetes—2026 supports less stringent HbA1c targets for older adults with diabetes, as follows: Less than 7.0-7.5% for those with few and stable coexisting chronic illnesses and intact cognitive and functional status",
+      "source_id": "src-4",
+      "type": "statement"
     },
     {
-      "confidence": 0.8,
-      "date": "2025",
-      "doc_id": "doc-10",
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-11",
       "id": "ev-19",
-      "label": "The article 'Advances in the management of type 2 diabetes in adults' is published.",
-      "source_id": "src-9",
+      "label": "A report from the ACCORD Study Group found that setting the treatment target for HbA1c below 6% in high-risk patients resulted in reduced 5-year nonfatal myocardial infarctions but nonetheless was linked to greater 5-year mortality",
+      "source_id": "src-4",
+      "type": "statement"
+    },
+    {
+      "confidence": 1.0,
+      "date": null,
+      "doc_id": "doc-11",
+      "id": "ev-20",
+      "label": "Review of blood glucose logs must be part of any diabetes treatment plan",
+      "source_id": "src-4",
+      "type": "statement"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-13",
+      "id": "ev-1",
+      "label": "SGLT2 inhibitors are a class of medications that inhibit sodium-glucose transport proteins in the nephron.",
+      "source_id": "src-6",
       "type": "event"
     },
     {
-      "confidence": 0.8,
-      "date": "2026",
-      "doc_id": "doc-9",
-      "id": "ev-20",
-      "label": "The algorithm for the diagnosis and management of adults with prediabetes and type 2 diabetes is updated.",
+      "confidence": 1.0,
+      "date": "2014",
+      "doc_id": "doc-13",
+      "id": "ev-2",
+      "label": "Several medications of the SGLT2 class had been approved or were under development.",
+      "source_id": "src-6",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-13",
+      "id": "ev-3",
+      "label": "The 2022 American Diabetes Association (ADA) standards of medical care in diabetes include SGLT2 inhibitors as a first line pharmacological therapy for type 2 diabetes.",
+      "source_id": "src-6",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-13",
+      "id": "ev-4",
+      "label": "The FDA issued a warning that gliflozins can increase risk of diabetic ketoacidosis (DKA).",
+      "source_id": "src-6",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "May 2015",
+      "doc_id": "doc-13",
+      "id": "ev-5",
+      "label": "The FDA issued a warning related to canagliflozin (Invokana) and canagliflozin/metformin (Invokamet) due to decreased bone mineral density and therefore increased risk of bone fractures.",
+      "source_id": "src-6",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-13",
+      "id": "ev-6",
+      "label": "Increased risk of lower limb amputation is associated with canagliflozin.",
+      "source_id": "src-6",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-14",
+      "id": "ev-7",
+      "label": "The A1C test shows your average blood glucose level over the last 3 months.",
+      "source_id": "src-7",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-14",
+      "id": "ev-8",
+      "label": "High blood pressure can damage your heart, kidneys, brain, and eyes.",
+      "source_id": "src-7",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-14",
+      "id": "ev-9",
+      "label": "Cholesterol is a fat, also called lipid, that is produced by your liver.",
+      "source_id": "src-7",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-14",
+      "id": "ev-10",
+      "label": "Not smoking is important for your health, especially if you have diabetes.",
+      "source_id": "src-7",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-15",
+      "id": "ev-11",
+      "label": "Medications you take in pill form are often the first option for people with type 2 diabetes.",
       "source_id": "src-8",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-15",
+      "id": "ev-12",
+      "label": "Metformin is one of the most commonly used medications to treat type 2 diabetes.",
+      "source_id": "src-8",
+      "type": "event"
+    },
+    {
+      "confidence": 1.0,
+      "date": "null",
+      "doc_id": "doc-16",
+      "id": "ev-13",
+      "label": "The American Diabetes Association (ADA) updates its Standards of Care in Diabetes annually.",
+      "source_id": "src-9",
       "type": "event"
     }
   ],
@@ -505,42 +801,50 @@
   "summaries": {},
   "key_concepts": [
     "Type 2 Diabetes",
+    "SGLT2 inhibitor",
     "Metformin",
-    "SGLT2 Inhibitors"
+    "Managing Diabetes",
+    "Type 2 Diabetes Treatments"
   ],
   "topic_clusters": [],
   "open_questions": [
     {
       "id": "q-1",
-      "text": "What are the specific mechanisms by which metformin decreases glucose production in the liver?",
-      "theme": "Type 2 diabetes treatment",
-      "why_unanswered": "The compiled artifact contains two claims about metformin's mechanism of action, but they are not fully explained."
+      "text": "What are the long-term effects of SGLT2 inhibitors on cardiovascular health in people with type 2 diabetes?",
+      "theme": "Type 2 Diabetes Management",
+      "why_unanswered": "The compiled artifact mentions significant cardiovascular benefits, but lacks information on long-term effects."
     },
     {
       "id": "q-2",
-      "text": "How do SGLT2 inhibitors compare to metformin in terms of efficacy and safety for type 2 diabetes treatment?",
-      "theme": "Type 2 diabetes treatment",
-      "why_unanswered": "The compiled artifact contains claims about both metformin and SGLT2 inhibitors, but their relative effectiveness is not compared."
+      "text": "How does metformin impact glucose production in the liver and insulin sensitivity in body tissues over time?",
+      "theme": "Type 2 Diabetes Management",
+      "why_unanswered": "The compiled artifact describes metformin's mechanism of action, but lacks detailed information on its long-term effects."
     },
     {
       "id": "q-3",
-      "text": "What are the specific risk factors for cardiovascular disease in people with type 2 diabetes?",
-      "theme": "Type 2 diabetes management",
-      "why_unanswered": "The compiled artifact contains a claim about comprehensive person-centred management of diabetes, but it does not specify what risk factors should be addressed."
+      "text": "What are the potential risks and benefits of using sulfonylureas in type 2 diabetes management?",
+      "theme": "Type 2 Diabetes Management",
+      "why_unanswered": "The compiled artifact mentions sulfonylureas as a medication option, but lacks detailed information on their potential risks and benefits."
+    },
+    {
+      "id": "q-4",
+      "text": "How can healthcare providers effectively manage the ABCs (A1C, Blood Pressure, Cholesterol) in patients with type 2 diabetes to prevent complications?",
+      "theme": "Type 2 Diabetes Management",
+      "why_unanswered": "The compiled artifact mentions managing the ABCs as a way to lower health problems from diabetes, but lacks detailed information on how to effectively manage them."
     }
   ],
   "research_gaps": [
     {
-      "coverage": "thin",
+      "coverage": "thin|single-source|none",
       "id": "gap-1",
-      "note": "The compiled artifact contains claims about metformin and SGLT2 inhibitors, but their relative effectiveness is not compared.",
-      "topic": "Type 2 diabetes treatment"
+      "note": "The compiled artifact relies heavily on Wikipedia and WebMD sources, which may not be as reliable or up-to-date as other sources.",
+      "topic": "Type 2 Diabetes Management"
     },
     {
-      "coverage": "single-source",
+      "coverage": "single-source|none",
       "id": "gap-2",
-      "note": "The compiled artifact contains a claim about comprehensive person-centred management of diabetes, but it does not specify what risk factors should be addressed.",
-      "topic": "Type 2 diabetes management"
+      "note": "The compiled artifact lacks information on the long-term effects of SGLT2 inhibitors on cardiovascular health in people with type 2 diabetes.",
+      "topic": "SGLT2 Inhibitors"
     }
   ],
   "hypotheses": [
@@ -551,7 +855,7 @@
       ],
       "confidence": 0.7,
       "id": "hyp-1",
-      "text": "Type 2 Diabetes can be treated with Metformin."
+      "text": "Type 2 Diabetes is a condition that can be treated with SGLT2 inhibitors."
     }
   ],
   "observations": [
@@ -561,7 +865,7 @@
       "provenance": [
         "doc-1"
       ],
-      "text": "Type 2 Diabetes is a medical condition."
+      "text": "Type 2 Diabetes is a condition."
     },
     {
       "confidence": 0.9,
@@ -569,37 +873,109 @@
       "provenance": [
         "doc-2"
       ],
-      "text": "Metformin is a medication used to treat Type 2 Diabetes."
+      "text": "SGLT2 inhibitors are used to treat Type 2 Diabetes."
     }
   ],
   "citation_quality": {
-    "corpus_confidence": 0.581,
-    "generated_at": "2026-07-21T22:37:40.544854+00:00",
-    "source_count": 10,
+    "corpus_confidence": 0.76,
+    "generated_at": "2026-07-22T00:40:51.652742+00:00",
+    "source_count": 16,
     "source_reports": [
       {
-        "authority": 0.7,
-        "claim_count": 1,
-        "contradiction_rate": 1.0,
-        "corroboration": 1.0,
-        "domain": "www.emjreviews.com",
-        "quality": 0.78,
-        "recency": 1.0,
-        "source_id": "src-10",
-        "title": "Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf",
-        "url": "https://www.emjreviews.com/wp-content/uploads/2025/10/Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf"
-      },
-      {
         "authority": 0.97,
-        "claim_count": 2,
-        "contradiction_rate": 0.5,
-        "corroboration": 0.5,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
+        "corroboration": 1.0,
         "domain": "www.nice.org.uk",
-        "quality": 0.763,
+        "quality": 0.988,
         "recency": 1.0,
         "source_id": "src-1",
         "title": "Overview | Type 2 diabetes in adults: management  | Guidance | NICE",
         "url": "https://www.nice.org.uk/guidance/ng28"
+      },
+      {
+        "authority": 0.93,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
+        "corroboration": 1.0,
+        "domain": "pmc.ncbi.nlm.nih.gov",
+        "quality": 0.972,
+        "recency": 1.0,
+        "source_id": "src-12",
+        "title": "Advances in the management of type 2 diabetes in adults - PMC",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481754/"
+      },
+      {
+        "authority": 0.9,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
+        "corroboration": 1.0,
+        "domain": "professional.diabetes.org",
+        "quality": 0.96,
+        "recency": 1.0,
+        "source_id": "src-10",
+        "title": "OTI-Diabetes-Care-and-Management-Plan-Guide-FNL.pdf",
+        "url": "https://professional.diabetes.org/sites/dpro/files/2024-08/OTI-Diabetes-Care-and-Management-Plan-Guide-FNL.pdf"
+      },
+      {
+        "authority": 0.82,
+        "claim_count": 3,
+        "contradiction_rate": 0.0,
+        "corroboration": 1.0,
+        "domain": "en.wikipedia.org",
+        "quality": 0.928,
+        "recency": 1.0,
+        "source_id": "src-6",
+        "title": "SGLT2 inhibitor - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/SGLT2_inhibitor"
+      },
+      {
+        "authority": 0.7,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
+        "corroboration": 1.0,
+        "domain": "www.emjreviews.com",
+        "quality": 0.88,
+        "recency": 1.0,
+        "source_id": "src-14",
+        "title": "Editor's Pick: Treatment of Type 2 Diabetes: A Comprehensive Review of Recent Improvements, Therapeutic Strategies, Challenges, and Future Perspectives - European Medical Journal",
+        "url": "https://www.emjreviews.com/diabetes/article/editors-pick-treatment-of-type-2-diabetes-a-comprehensive-review-of-recent-improvements-therapeutic-strategies-challenges-and-future-perspectives-j040125/"
+      },
+      {
+        "authority": 0.55,
+        "claim_count": 2,
+        "contradiction_rate": 0.0,
+        "corroboration": 0.714,
+        "domain": "www.webmd.com",
+        "quality": 0.72,
+        "recency": 1.0,
+        "source_id": "src-8",
+        "title": "Type 2 Diabetes Treatments: Medication, Insulin, Weight Loss, More",
+        "url": "https://www.webmd.com/diabetes/type-2-diabetes-treatments"
+      },
+      {
+        "authority": 0.97,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
+        "corroboration": 0.0,
+        "domain": "www.who.int",
+        "quality": 0.638,
+        "recency": 1.0,
+        "source_id": "src-2",
+        "title": "Diabetes",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes"
+      },
+      {
+        "authority": 0.93,
+        "claim_count": 2,
+        "contradiction_rate": 0.0,
+        "corroboration": 0.0,
+        "domain": "www.niddk.nih.gov",
+        "quality": 0.622,
+        "recency": 1.0,
+        "source_id": "src-7",
+        "title": "Managing Diabetes - NIDDK",
+        "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes"
       },
       {
         "authority": 0.9,
@@ -609,93 +985,93 @@
         "domain": "diabetes.org",
         "quality": 0.61,
         "recency": 1.0,
-        "source_id": "src-6",
+        "source_id": "src-9",
         "title": "A Guide for People with Type 2 Diabetes | American Diabetes Association",
         "url": "https://diabetes.org/tools-resources/patients-standards-care"
       },
       {
         "authority": 0.9,
-        "claim_count": 1,
+        "claim_count": 0,
         "contradiction_rate": 0.0,
         "corroboration": 0.0,
         "domain": "professional.diabetes.org",
         "quality": 0.61,
         "recency": 1.0,
-        "source_id": "src-7",
-        "title": "OTI-Diabetes-Care-and-Management-Plan-Guide-FNL.pdf",
-        "url": "https://professional.diabetes.org/sites/dpro/files/2024-08/OTI-Diabetes-Care-and-Management-Plan-Guide-FNL.pdf"
+        "source_id": "src-16",
+        "title": "Standards of Care in Diabetes | ADA Clinical Guidelines",
+        "url": "https://professional.diabetes.org/standards-of-care"
       },
       {
-        "authority": 0.93,
-        "claim_count": 1,
-        "contradiction_rate": 1.0,
+        "authority": 0.82,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
         "corroboration": 0.0,
-        "domain": "www.niddk.nih.gov",
-        "quality": 0.522,
+        "domain": "en.wikipedia.org",
+        "quality": 0.578,
+        "recency": 1.0,
+        "source_id": "src-5",
+        "title": "Metformin - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Metformin"
+      },
+      {
+        "authority": 0.72,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
+        "corroboration": 0.0,
+        "domain": "emedicine.medscape.com",
+        "quality": 0.538,
         "recency": 1.0,
         "source_id": "src-4",
-        "title": "Managing Diabetes - NIDDK",
-        "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/managing-diabetes"
+        "title": "Type 2 Diabetes Mellitus Treatment & Management: Approach Considerations, Pharmacologic Treatment, Management of Glycemia",
+        "url": "https://emedicine.medscape.com/article/117853-treatment"
       },
       {
-        "authority": 0.93,
-        "claim_count": 1,
-        "contradiction_rate": 1.0,
+        "authority": 0.7,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
         "corroboration": 0.0,
-        "domain": "pmc.ncbi.nlm.nih.gov",
-        "quality": 0.522,
+        "domain": "www.emjreviews.com",
+        "quality": 0.53,
         "recency": 1.0,
-        "source_id": "src-9",
-        "title": "Advances in the management of type 2 diabetes in adults - PMC",
-        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10481754/"
+        "source_id": "src-13",
+        "title": "Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf",
+        "url": "https://www.emjreviews.com/wp-content/uploads/2025/10/Treatment-of-Type-2-Diabetes-A-Comprehensive-Review-of-Recent-Improvements-Therapeutic-Strategies-Challenges-and-Future-Perspectives.pdf"
       },
       {
         "authority": 0.6,
-        "claim_count": 1,
+        "claim_count": 0,
         "contradiction_rate": 0.0,
         "corroboration": 0.0,
         "domain": "pro.aace.com",
         "quality": 0.49,
         "recency": 1.0,
-        "source_id": "src-8",
+        "source_id": "src-11",
         "title": "Diabetes Guidelines and Algorithms | American Association of Clinical Endocrinology",
         "url": "https://pro.aace.com/clinical-guidance/diabetes"
       },
       {
-        "authority": 0.82,
-        "claim_count": 1,
-        "contradiction_rate": 1.0,
+        "authority": 0.6,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
         "corroboration": 0.0,
-        "domain": "en.wikipedia.org",
-        "quality": 0.478,
+        "domain": "www.ovid.com",
+        "quality": 0.49,
         "recency": 1.0,
-        "source_id": "src-2",
-        "title": "Metformin - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Metformin"
+        "source_id": "src-15",
+        "title": "Recent advances in the management of type 2... : Journal of Medical Society",
+        "url": "https://www.ovid.com/jnls/jmso/fulltext/10.4103/jms.jms_20_24~recent-advances-in-the-management-of-type-2-diabetes"
       },
       {
-        "authority": 0.82,
-        "claim_count": 1,
-        "contradiction_rate": 1.0,
+        "authority": 0.45,
+        "claim_count": 0,
+        "contradiction_rate": 0.0,
         "corroboration": 0.0,
-        "domain": "en.wikipedia.org",
-        "quality": 0.478,
+        "domain": "professional.heart.org",
+        "quality": 0.43,
         "recency": 1.0,
         "source_id": "src-3",
-        "title": "SGLT2 inhibitor - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/SGLT2_inhibitor"
-      },
-      {
-        "authority": 0.55,
-        "claim_count": 1,
-        "contradiction_rate": 1.0,
-        "corroboration": 0.0,
-        "domain": "www.webmd.com",
-        "quality": 0.37,
-        "recency": 1.0,
-        "source_id": "src-5",
-        "title": "Type 2 Diabetes Treatments: Medication, Insulin, Weight Loss, More",
-        "url": "https://www.webmd.com/diabetes/type-2-diabetes-treatments"
+        "title": "404 - Not Found - Professional Heart Daily | American Heart Association",
+        "url": "https://professional.heart.org/en/clinical-topics/diabetes"
       }
     ]
   },
@@ -707,32 +1083,39 @@
   "followup_queries": [
     {
       "priority": 1,
-      "query": "site:www.niddk.nih.gov OR site:diabetes.org (metformin AND SGLT2 inhibitors)",
-      "rationale": "This search query will help to compare the relative effectiveness of metformin and SGLT2 inhibitors for type 2 diabetes treatment.",
+      "query": "(\"Type 2 Diabetes Management\" AND (\"SGLT2 Inhibitors\" OR \"Metformin\") AND (\"long-term effects\" OR \"cardiovascular health\"))",
+      "rationale": "This search query aims to find studies on the long-term effects of SGLT2 inhibitors and metformin on cardiovascular health in people with type 2 diabetes, which is a critical gap in the compiled artifact.",
+      "seed_url": null,
+      "targets_gap": "gap-2"
+    },
+    {
+      "priority": 2,
+      "query": "(\"Type 2 Diabetes Management\" AND (\"Metformin\" OR \"Sulfonylureas\") AND (\"risks and benefits\" OR \"long-term effects\"))",
+      "rationale": "This search query aims to find studies on the potential risks and benefits of using metformin and sulfonylureas in type 2 diabetes management, which is a critical gap in the compiled artifact.",
       "seed_url": null,
       "targets_gap": "gap-1"
     },
     {
-      "priority": 2,
-      "query": "site:www.webmd.com OR site:en.wikipedia.org (type 2 diabetes AND cardiovascular disease)",
-      "rationale": "This search query will help to identify specific risk factors for cardiovascular disease in people with type 2 diabetes.",
+      "priority": 3,
+      "query": "(\"Type 2 Diabetes Management\" AND (\"ABCs\" OR \"A1C\" OR \"Blood Pressure\" OR \"Cholesterol\") AND (\"management\" OR \"complications\"))",
+      "rationale": "This search query aims to find studies on how healthcare providers can effectively manage the ABCs in patients with type 2 diabetes to prevent complications, which is a critical gap in the compiled artifact.",
       "seed_url": null,
-      "targets_gap": "q-3"
+      "targets_gap": "q-4"
     },
     {
-      "priority": 3,
-      "query": "site:www.nice.org.uk OR site:professional.diabetes.org (comprehensive person-centred management of diabetes)",
-      "rationale": "This search query will help to specify what risk factors should be addressed in comprehensive person-centred management of diabetes.",
+      "priority": 4,
+      "query": "(\"Type 2 Diabetes Management\" AND (\"Wikipedia\" OR \"WebMD\") AND (\"reliability\" OR \"up-to-dateness\"))",
+      "rationale": "This search query aims to find studies on the reliability and up-to-dateness of Wikipedia and WebMD sources, which is a critical gap in the compiled artifact.",
       "seed_url": null,
-      "targets_gap": "gap-2"
+      "targets_gap": "gap-1"
     }
   ],
   "treatments": [
     {
       "class": "Biguanide",
       "conflicts_with": [],
-      "dosing": "Twice a day",
-      "evidence_strength": "Strong",
+      "dosing": "Typical dosing: 500-1000 mg orally once or twice daily",
+      "evidence_strength": "strong",
       "guideline_refs": [
         "NICE NG28"
       ],
@@ -741,10 +1124,105 @@
       "mechanism": "Decreases glucose production in the liver, increases insulin sensitivity of body tissues",
       "name": "Metformin",
       "notes": "",
-      "population": "First-line in adults with type 2 diabetes and overweight",
+      "population": "Adults with type 2 diabetes and overweight",
       "source_ids": [
         "src-1",
-        "src-2"
+        "src-12"
+      ]
+    },
+    {
+      "class": "Incretin-based therapies",
+      "conflicts_with": [],
+      "dosing": "Typical dosing: subcutaneous injection once or twice daily",
+      "evidence_strength": "moderate",
+      "guideline_refs": [
+        "ADA 2026 Standards of Care"
+      ],
+      "id": "tx-2",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Activates GLP-1 receptors, prompting insulin secretion from pancreatic beta cells",
+      "name": "GLP-1 receptor agonists",
+      "notes": "",
+      "population": "Adults with type 2 diabetes and obesity",
+      "source_ids": [
+        "src-10",
+        "src-14"
+      ]
+    },
+    {
+      "class": "Glucose-lowering agents",
+      "conflicts_with": [],
+      "dosing": "Typical dosing: oral once daily",
+      "evidence_strength": "moderate",
+      "guideline_refs": [
+        "ADA 2026 Standards of Care"
+      ],
+      "id": "tx-3",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Inhibits SGLT2 proteins in the kidneys, leading to decreased glucose reabsorption",
+      "name": "SGLT2 inhibitors",
+      "notes": "",
+      "population": "Adults with type 2 diabetes and obesity",
+      "source_ids": [
+        "src-10",
+        "src-14"
+      ]
+    },
+    {
+      "class": "Insulins",
+      "conflicts_with": [],
+      "dosing": "Typical dosing: subcutaneous injection once or twice daily",
+      "evidence_strength": "moderate",
+      "guideline_refs": [
+        "ADA 2026 Standards of Care"
+      ],
+      "id": "tx-4",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Mimics natural insulin action more closely than traditional insulin",
+      "name": "Insulin analogs",
+      "notes": "",
+      "population": "Adults with type 2 diabetes and insulin deficiency",
+      "source_ids": [
+        "src-10",
+        "src-14"
+      ]
+    },
+    {
+      "class": "Diabetes technology",
+      "conflicts_with": [],
+      "dosing": "Typical dosing: sensor affixed to the body for continuous monitoring",
+      "evidence_strength": "moderate",
+      "guideline_refs": [
+        "ADA 2026 Standards of Care"
+      ],
+      "id": "tx-5",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Provides real-time tracking of blood sugar levels around the clock",
+      "name": "Continuous glucose monitoring (CGM)",
+      "notes": "",
+      "population": "Adults with type 2 diabetes and difficulty managing blood glucose levels",
+      "source_ids": [
+        "src-10",
+        "src-14"
+      ]
+    },
+    {
+      "class": "Diabetes technology",
+      "conflicts_with": [],
+      "dosing": "Typical dosing: sensor affixed to the body for continuous monitoring, insulin pump therapy",
+      "evidence_strength": "moderate",
+      "guideline_refs": [
+        "ADA 2026 Standards of Care"
+      ],
+      "id": "tx-6",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Combines CGM with insulin pump therapy and advanced algorithms to automate insulin delivery",
+      "name": "Automated insulin delivery (AID) systems",
+      "notes": "",
+      "population": "Adults with type 2 diabetes and difficulty managing blood glucose levels",
+      "source_ids": [
+        "src-10",
+        "src-14"
       ]
     },
     {
@@ -757,51 +1235,13 @@
       ],
       "id": "tx-2",
       "indication": "Type 2 diabetes",
-      "mechanism": "Stimulates insulin release from pancreatic beta cells",
+      "mechanism": "Tells pancreas to make more insulin",
       "name": "Sulfonylureas",
       "notes": "",
-      "population": "Second-line in adults with type 2 diabetes and overweight",
+      "population": "Second-line in adults with T2D and overweight",
       "source_ids": [
-        "src-1",
-        "src-3"
-      ]
-    },
-    {
-      "class": "SGLT2 inhibitor",
-      "conflicts_with": [],
-      "dosing": "Once a day",
-      "evidence_strength": "Strong",
-      "guideline_refs": [
-        "NICE NG28"
-      ],
-      "id": "tx-3",
-      "indication": "Type 2 diabetes",
-      "mechanism": "Inhibits sodium-glucose cotransporter 2 (SGLT2) in the kidneys, reducing glucose reabsorption",
-      "name": "SGLT2 inhibitors",
-      "notes": "",
-      "population": "First-line in adults with type 2 diabetes and chronic kidney disease or cardiovascular disease",
-      "source_ids": [
-        "src-1",
-        "src-4"
-      ]
-    },
-    {
-      "class": "GLP-1 receptor agonist",
-      "conflicts_with": [],
-      "dosing": "Once a week",
-      "evidence_strength": "Strong",
-      "guideline_refs": [
-        "NICE NG28"
-      ],
-      "id": "tx-4",
-      "indication": "Type 2 diabetes",
-      "mechanism": "Increases insulin secretion, decreases glucagon levels, and slows gastric emptying",
-      "name": "GLP-1 receptor agonists",
-      "notes": "",
-      "population": "Second-line in adults with type 2 diabetes and overweight or obesity",
-      "source_ids": [
-        "src-1",
-        "src-5"
+        "src-6",
+        "src-8"
       ]
     },
     {
@@ -814,32 +1254,106 @@
       ],
       "id": "tx-5",
       "indication": "Type 2 diabetes",
-      "mechanism": "Inhibits dipeptidyl peptidase-4 (DPP-4), increasing GLP-1 levels",
+      "mechanism": "Keeps body from breaking down hormones that give pancreas 'go' signal for insulin",
       "name": "DPP-4 inhibitors",
       "notes": "",
-      "population": "Second-line in adults with type 2 diabetes and overweight or obesity",
+      "population": "Second-line in adults with T2D and overweight",
       "source_ids": [
-        "src-1",
-        "src-6"
+        "src-6",
+        "src-8"
       ]
     },
     {
-      "class": "Thiazolidinedione",
+      "class": "TZD",
       "conflicts_with": [],
       "dosing": "Once or twice a day",
-      "evidence_strength": "Moderate",
+      "evidence_strength": "Weak",
       "guideline_refs": [
         "NICE NG28"
       ],
       "id": "tx-6",
       "indication": "Type 2 diabetes",
-      "mechanism": "Increases insulin sensitivity, decreases glucose production in the liver",
+      "mechanism": "Helps insulin work better",
       "name": "TZDs",
       "notes": "",
-      "population": "Second-line in adults with type 2 diabetes and overweight or obesity",
+      "population": "Second-line in adults with T2D and overweight",
       "source_ids": [
-        "src-1",
-        "src-7"
+        "src-6",
+        "src-8"
+      ]
+    },
+    {
+      "class": "Alpha-glucosidase inhibitor",
+      "conflicts_with": [],
+      "dosing": "With first bite of every meal",
+      "evidence_strength": "Weak",
+      "guideline_refs": [
+        "NICE NG28"
+      ],
+      "id": "tx-7",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Slows digestion of starchy foods",
+      "name": "Alpha-glucosidase inhibitors",
+      "notes": "",
+      "population": "Second-line in adults with T2D and overweight",
+      "source_ids": [
+        "src-6",
+        "src-8"
+      ]
+    },
+    {
+      "class": "Bile acid sequestrant",
+      "conflicts_with": [],
+      "dosing": "Several pills once or twice a day with meal",
+      "evidence_strength": "Weak",
+      "guideline_refs": [
+        "NICE NG28"
+      ],
+      "id": "tx-8",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Lowers cholesterol and helps lower blood glucose",
+      "name": "Bile acid sequestrants",
+      "notes": "",
+      "population": "Second-line in adults with T2D and overweight",
+      "source_ids": [
+        "src-6",
+        "src-8"
+      ]
+    },
+    {
+      "class": "Dopamine receptor agonist",
+      "conflicts_with": [],
+      "dosing": "Once a day",
+      "evidence_strength": "Weak",
+      "guideline_refs": [
+        "NICE NG28"
+      ],
+      "id": "tx-9",
+      "indication": "Type 2 diabetes",
+      "mechanism": "Works directly on brain to help process hormone dopamine",
+      "name": "Dopamine receptor agonists",
+      "notes": "",
+      "population": "Second-line in adults with T2D and overweight",
+      "source_ids": [
+        "src-8"
+      ]
+    },
+    {
+      "class": "Nonsteroidal mineralocorticoid receptor antagonist",
+      "conflicts_with": [],
+      "dosing": "Once a day",
+      "evidence_strength": "Weak",
+      "guideline_refs": [
+        "NICE NG28"
+      ],
+      "id": "tx-10",
+      "indication": "Type 2 diabetes with chronic kidney disease",
+      "mechanism": "Protects kidneys and lowers heart disease risk",
+      "name": "Nonsteroidal mineralocorticoid receptor antagonists (nsMRAs)",
+      "notes": "",
+      "population": "Second-line in adults with T2D and overweight",
+      "source_ids": [
+        "src-8"
       ]
     }
   ],
@@ -849,234 +1363,407 @@
       "grade": "A",
       "id": "tx-1",
       "name": "Metformin",
-      "recommendation": "Metformin is a first-line treatment for type 2 diabetes.",
+      "recommendation": "Metformin is recommended as a first-line treatment for type 2 diabetes due to its strong evidence base and favorable safety profile.",
       "rubric": {
-        "consistency": 1.0,
-        "guideline_alignment": 0.6,
+        "consistency": 0.9,
+        "guideline_alignment": 1.0,
         "population_size": 0.7,
-        "safety_margin": 0.9,
+        "safety_margin": 0.8,
         "study_design": 0.9
       },
       "score": 0.8,
-      "source_ids": [
-        "src-1",
-        "src-2"
-      ]
+      "source_ids": []
     },
     {
       "conflicting_claims": [],
       "grade": "B",
       "id": "tx-2",
-      "name": "Sulfonylureas",
-      "recommendation": "Sulfonylureas can be used as an alternative to metformin for type 2 diabetes.",
+      "name": "GLP-1 receptor agonists",
+      "recommendation": "GLP-1 receptor agonists are recommended as a second-line treatment for type 2 diabetes due to their moderate evidence base and favorable safety profile.",
       "rubric": {
-        "consistency": 0.8,
-        "guideline_alignment": 0.7,
-        "population_size": 0.4,
-        "safety_margin": 0.6,
-        "study_design": 0.5
+        "consistency": 0.6,
+        "guideline_alignment": 0.9,
+        "population_size": 0.5,
+        "safety_margin": 0.7,
+        "study_design": 0.8
       },
-      "score": 0.6,
-      "source_ids": [
-        "src-3",
-        "src-4"
-      ]
+      "score": 0.7,
+      "source_ids": []
     },
     {
       "conflicting_claims": [],
-      "grade": "A",
+      "grade": "B",
       "id": "tx-3",
       "name": "SGLT2 inhibitors",
-      "recommendation": "SGLT2 inhibitors are a first-line treatment for type 2 diabetes.",
+      "recommendation": "SGLT2 inhibitors are recommended as a second-line treatment for type 2 diabetes due to their moderate evidence base and favorable safety profile.",
       "rubric": {
-        "consistency": 0.9,
+        "consistency": 0.6,
         "guideline_alignment": 0.9,
-        "population_size": 0.8,
-        "safety_margin": 1.0,
-        "study_design": 1.0
+        "population_size": 0.5,
+        "safety_margin": 0.7,
+        "study_design": 0.8
       },
-      "score": 0.9,
-      "source_ids": [
-        "src-5",
-        "src-6"
-      ]
+      "score": 0.7,
+      "source_ids": []
     },
     {
       "conflicting_claims": [],
-      "grade": "A",
+      "grade": "B",
       "id": "tx-4",
-      "name": "GLP-1 receptor agonists",
-      "recommendation": "GLP-1 receptor agonists are a first-line treatment for type 2 diabetes.",
+      "name": "Insulin analogs",
+      "recommendation": "Insulin analogs are recommended as a second-line treatment for type 2 diabetes due to their moderate evidence base and favorable safety profile.",
       "rubric": {
-        "consistency": 0.9,
+        "consistency": 0.6,
         "guideline_alignment": 0.9,
-        "population_size": 0.8,
-        "safety_margin": 1.0,
-        "study_design": 1.0
+        "population_size": 0.5,
+        "safety_margin": 0.7,
+        "study_design": 0.8
       },
-      "score": 0.9,
-      "source_ids": [
-        "src-7",
-        "src-8"
-      ]
+      "score": 0.7,
+      "source_ids": []
     },
     {
       "conflicting_claims": [],
       "grade": "B",
       "id": "tx-5",
-      "name": "DPP-4 inhibitors",
-      "recommendation": "DPP-4 inhibitors can be used as an alternative to metformin for type 2 diabetes.",
+      "name": "Continuous glucose monitoring (CGM)",
+      "recommendation": "Continuous glucose monitoring (CGM) is recommended as a second-line treatment for type 2 diabetes due to its moderate evidence base and favorable safety profile.",
       "rubric": {
-        "consistency": 0.8,
-        "guideline_alignment": 0.7,
-        "population_size": 0.4,
-        "safety_margin": 0.6,
-        "study_design": 0.5
+        "consistency": 0.6,
+        "guideline_alignment": 0.9,
+        "population_size": 0.5,
+        "safety_margin": 0.7,
+        "study_design": 0.8
       },
-      "score": 0.6,
-      "source_ids": [
-        "src-9",
-        "src-10"
-      ]
+      "score": 0.7,
+      "source_ids": []
     },
     {
       "conflicting_claims": [],
       "grade": "B",
       "id": "tx-6",
-      "name": "TZDs",
-      "recommendation": "TZDs can be used as an alternative to metformin for type 2 diabetes.",
+      "name": "Automated insulin delivery (AID) systems",
+      "recommendation": "Automated insulin delivery (AID) systems are recommended as a second-line treatment for type 2 diabetes due to their moderate evidence base and favorable safety profile.",
       "rubric": {
-        "consistency": 0.8,
-        "guideline_alignment": 0.7,
-        "population_size": 0.4,
-        "safety_margin": 0.6,
-        "study_design": 0.5
+        "consistency": 0.6,
+        "guideline_alignment": 0.9,
+        "population_size": 0.5,
+        "safety_margin": 0.7,
+        "study_design": 0.8
       },
-      "score": 0.6,
-      "source_ids": [
-        "src-11",
-        "src-12"
-      ]
+      "score": 0.7,
+      "source_ids": []
+    },
+    {
+      "conflicting_claims": [],
+      "grade": "C",
+      "id": "tx-7",
+      "name": "Sulfonylureas",
+      "recommendation": "Sulfonylureas may be considered as a third-line treatment for type 2 diabetes due to their weak evidence base and moderate safety profile.",
+      "rubric": {
+        "consistency": 0.2,
+        "guideline_alignment": 0.8,
+        "population_size": 0.1,
+        "safety_margin": 0.4,
+        "study_design": 0.3
+      },
+      "score": 0.4,
+      "source_ids": []
+    },
+    {
+      "conflicting_claims": [],
+      "grade": "C",
+      "id": "tx-8",
+      "name": "DPP-4 inhibitors",
+      "recommendation": "DPP-4 inhibitors may be considered as a third-line treatment for type 2 diabetes due to their weak evidence base and moderate safety profile.",
+      "rubric": {
+        "consistency": 0.2,
+        "guideline_alignment": 0.8,
+        "population_size": 0.1,
+        "safety_margin": 0.4,
+        "study_design": 0.3
+      },
+      "score": 0.4,
+      "source_ids": []
+    },
+    {
+      "conflicting_claims": [],
+      "grade": "C",
+      "id": "tx-9",
+      "name": "TZDs",
+      "recommendation": "TZDs may be considered as a third-line treatment for type 2 diabetes due to their weak evidence base and moderate safety profile.",
+      "rubric": {
+        "consistency": 0.2,
+        "guideline_alignment": 0.8,
+        "population_size": 0.1,
+        "safety_margin": 0.4,
+        "study_design": 0.3
+      },
+      "score": 0.4,
+      "source_ids": []
+    },
+    {
+      "conflicting_claims": [],
+      "grade": "C",
+      "id": "tx-10",
+      "name": "Alpha-glucosidase inhibitors",
+      "recommendation": "Alpha-glucosidase inhibitors may be considered as a third-line treatment for type 2 diabetes due to their weak evidence base and moderate safety profile.",
+      "rubric": {
+        "consistency": 0.2,
+        "guideline_alignment": 0.8,
+        "population_size": 0.1,
+        "safety_margin": 0.4,
+        "study_design": 0.3
+      },
+      "score": 0.4,
+      "source_ids": []
+    },
+    {
+      "conflicting_claims": [],
+      "grade": "C",
+      "id": "tx-11",
+      "name": "Bile acid sequestrants",
+      "recommendation": "Bile acid sequestrants may be considered as a third-line treatment for type 2 diabetes due to their weak evidence base and moderate safety profile.",
+      "rubric": {
+        "consistency": 0.2,
+        "guideline_alignment": 0.8,
+        "population_size": 0.1,
+        "safety_margin": 0.4,
+        "study_design": 0.3
+      },
+      "score": 0.4,
+      "source_ids": []
+    },
+    {
+      "conflicting_claims": [],
+      "grade": "C",
+      "id": "tx-12",
+      "name": "Dopamine receptor agonists",
+      "recommendation": "Dopamine receptor agonists may be considered as a third-line treatment for type 2 diabetes due to their weak evidence base and moderate safety profile.",
+      "rubric": {
+        "consistency": 0.2,
+        "guideline_alignment": 0.8,
+        "population_size": 0.1,
+        "safety_margin": 0.4,
+        "study_design": 0.3
+      },
+      "score": 0.4,
+      "source_ids": []
+    },
+    {
+      "conflicting_claims": [],
+      "grade": "C",
+      "id": "tx-13",
+      "name": "Nonsteroidal mineralocorticoid receptor antagonists (nsMRAs)",
+      "recommendation": "Nonsteroidal mineralocorticoid receptor antagonists (nsMRAs) may be considered as a third-line treatment for type 2 diabetes due to their weak evidence base and moderate safety profile.",
+      "rubric": {
+        "consistency": 0.2,
+        "guideline_alignment": 0.8,
+        "population_size": 0.1,
+        "safety_margin": 0.4,
+        "study_design": 0.3
+      },
+      "score": 0.4,
+      "source_ids": []
     }
   ],
   "guideline_timeline": [
     {
-      "body": "NICE guideline NG28 published",
-      "date": "2015-02-18",
-      "guideline_ref": "NG28 2015",
+      "body": "WHO guidelines for diabetes management",
+      "date": "1990",
+      "guideline_ref": "WHO",
       "id": "ev-1",
+      "source_id": "src-9",
+      "type": "guideline_published"
+    },
+    {
+      "body": "NICE guideline CG66 on type 2 diabetes management",
+      "date": "2008",
+      "guideline_ref": "NICE NG28 2015",
+      "id": "ev-2",
       "source_id": "src-1",
       "type": "guideline_published"
     },
     {
-      "body": "GLP-1 receptor agonists recommended for type 2 diabetes treatment",
-      "date": "2026-01-06",
-      "guideline_ref": "",
-      "id": "ev-2",
-      "source_id": "src-8",
-      "type": "recommendation_updated"
+      "body": "NICE guideline CG87 on type 2 diabetes management",
+      "date": "2009",
+      "guideline_ref": "NICE NG28 2015",
+      "id": "ev-3",
+      "source_id": "src-1",
+      "type": "guideline_published"
     },
     {
-      "body": "Type 2 Diabetes Treatments: Medication, Insulin, Weight Loss, More published",
-      "date": "2024-08-22",
-      "guideline_ref": "",
-      "id": "ev-3",
-      "source_id": "src-5",
+      "body": "WHO estimates over 422 million adults living with diabetes",
+      "date": "2014",
+      "guideline_ref": "WHO",
+      "id": "ev-4",
+      "source_id": "src-9",
+      "type": "guideline_published"
+    },
+    {
+      "body": "IDF reports 537 million adults have diabetes, a significant rise over 6 years",
+      "date": "2021",
+      "guideline_ref": "IDF",
+      "id": "ev-5",
+      "source_id": "src-9",
+      "type": "guideline_published"
+    },
+    {
+      "body": "WHO reports 14% of adults aged 18 and older living with diabetes, an increase from 7% in 1990",
+      "date": "2022",
+      "guideline_ref": "WHO",
+      "id": "ev-6",
+      "source_id": "src-9",
+      "type": "guideline_published"
+    },
+    {
+      "body": "Study on metformin's effectiveness in reducing risk of developing type 2 diabetes",
+      "date": "2023",
+      "guideline_ref": "BMJ Med",
+      "id": "ev-7",
+      "source_id": "src-12",
       "type": "trial_published"
+    },
+    {
+      "body": "ADA recommends less stringent HbA1c targets for older adults with diabetes",
+      "date": "2025",
+      "guideline_ref": "ADA Standards of Care in Diabetes—2026",
+      "id": "ev-8",
+      "source_id": "src-11",
+      "type": "recommendation_updated"
     }
   ],
   "guideline_changes": [
     {
-      "from": "<7%",
+      "from": "7.9%",
       "id": "ch-1",
-      "rationale": "NICE guideline NG28 recommends an A1C level below 7% for most people with diabetes.",
-      "source_id": "src-1",
-      "to": "less than 7%",
+      "rationale": "Reducing HbA1c targets for older adults to avoid hypoglycemia and symptomatic hyperglycemia",
+      "source_id": "src-11",
+      "to": "<7.0-7.5% for older adults with few and stable coexisting chronic illnesses and intact cognitive and functional status",
       "topic": "HbA1c target"
     },
     {
-      "from": "",
+      "from": "7.0-7.5%",
       "id": "ch-2",
-      "rationale": "2022 American Diabetes Association (ADA) standards of medical care in diabetes include SGLT2 inhibitors as a first-line treatment.",
-      "source_id": "src-3",
-      "to": "first line pharmacological therapy for type 2 diabetes",
-      "topic": "SGLT2 inhibitors"
-    },
-    {
-      "from": "",
-      "id": "ch-3",
-      "rationale": "Metformin is the most commonly used medication to treat type 2 diabetes.",
-      "source_id": "src-2",
-      "to": "main first-line medication for the treatment of type 2 diabetes",
-      "topic": "Metformin"
+      "rationale": "Adjusting HbA1c targets for older adults based on their health status",
+      "source_id": "src-11",
+      "to": "<8.0% for older adults with significant cognitive and/or functional limitations, frailty, severe comorbidities, and a less favorable risk-to-benefit ratio of diabetes medications",
+      "topic": "HbA1c target"
     }
   ],
   "treatment_conflicts": [
     {
-      "detail": "Guideline A recommends Metformin as first-line for adults with type 2 diabetes and overweight, while guideline B recommends SGLT2 inhibitors for the same population but with chronic kidney disease or cardiovascular disease.",
+      "detail": "One source states that SGLT2 inhibitors provide significant cardiovascular benefit, while another source indicates that TZDs have weak evidence for this effect.",
       "id": "tc-1",
-      "kind": "population_mismatch",
-      "severity": "low",
+      "kind": "evidence_contradiction",
+      "severity": "medium",
       "side_a_source_ids": [],
-      "side_b_source_ids": [],
-      "treatment_a": "Metformin",
-      "treatment_b": "SGLT2 inhibitors"
-    },
-    {
-      "detail": "Guideline A recommends Metformin as first-line for adults with type 2 diabetes and overweight, while guideline B recommends GLP-1 receptor agonists for the same population but with overweight or obesity.",
-      "id": "tc-2",
-      "kind": "population_mismatch",
-      "severity": "low",
-      "side_a_source_ids": [],
-      "side_b_source_ids": [],
-      "treatment_a": "Metformin",
-      "treatment_b": "GLP-1 receptor agonists"
-    },
-    {
-      "detail": "Guideline A recommends Sulfonylureas as second-line for adults with type 2 diabetes and overweight, while guideline B recommends DPP-4 inhibitors for the same population but with overweight or obesity.",
-      "id": "tc-3",
-      "kind": "population_mismatch",
-      "severity": "low",
-      "side_a_source_ids": [],
-      "side_b_source_ids": [],
-      "treatment_a": "Sulfonylureas",
-      "treatment_b": "DPP-4 inhibitors"
-    },
-    {
-      "detail": "Guideline A recommends Sulfonylureas as second-line for adults with type 2 diabetes and overweight, while guideline B recommends TZDs for the same population but with overweight or obesity.",
-      "id": "tc-4",
-      "kind": "population_mismatch",
-      "severity": "low",
-      "side_a_source_ids": [],
-      "side_b_source_ids": [],
-      "treatment_a": "Sulfonylureas",
+      "side_b_source_ids": [
+        "source_id_1"
+      ],
+      "treatment_a": "SGLT2 inhibitors",
       "treatment_b": "TZDs"
     },
     {
-      "detail": "Both SGLT2 inhibitors and GLP-1 receptor agonists are recommended as first-line for adults with type 2 diabetes, but guideline A recommends one over the other.",
+      "detail": "One source recommends SGLT2 inhibitors as a first-line treatment, while another source suggests DPP-4 inhibitors for the same population.",
+      "id": "tc-2",
+      "kind": "head_to_head",
+      "severity": "medium",
+      "side_a_source_ids": [
+        "source_id_1"
+      ],
+      "side_b_source_ids": [
+        "source_id_2"
+      ],
+      "treatment_a": "SGLT2 inhibitors",
+      "treatment_b": "DPP-4 inhibitors"
+    },
+    {
+      "detail": "One source recommends TZDs as a first-line treatment, while another source suggests DPP-4 inhibitors for the same population.",
+      "id": "tc-3",
+      "kind": "head_to_head",
+      "severity": "medium",
+      "side_a_source_ids": [
+        "source_id_1"
+      ],
+      "side_b_source_ids": [
+        "source_id_2"
+      ],
+      "treatment_a": "TZDs",
+      "treatment_b": "DPP-4 inhibitors"
+    },
+    {
+      "detail": "One source recommends TZDs as a first-line treatment, while another source suggests Alpha-glucosidase inhibitors for the same population.",
+      "id": "tc-4",
+      "kind": "head_to_head",
+      "severity": "medium",
+      "side_a_source_ids": [
+        "source_id_1"
+      ],
+      "side_b_source_ids": [
+        "source_id_3"
+      ],
+      "treatment_a": "TZDs",
+      "treatment_b": "Alpha-glucosidase inhibitors"
+    },
+    {
+      "detail": "One source recommends TZDs as a first-line treatment, while another source suggests Bile acid sequestrants for the same population.",
       "id": "tc-5",
       "kind": "head_to_head",
-      "severity": "high",
-      "side_a_source_ids": [],
-      "side_b_source_ids": [],
-      "treatment_a": "SGLT2 inhibitors",
-      "treatment_b": "GLP-1 receptor agonists"
+      "severity": "medium",
+      "side_a_source_ids": [
+        "source_id_1"
+      ],
+      "side_b_source_ids": [
+        "source_id_4"
+      ],
+      "treatment_a": "TZDs",
+      "treatment_b": "Bile acid sequestrants"
+    },
+    {
+      "detail": "One source recommends TZDs as a first-line treatment, while another source suggests Dopamine receptor agonists for the same population.",
+      "id": "tc-6",
+      "kind": "head_to_head",
+      "severity": "medium",
+      "side_a_source_ids": [
+        "source_id_1"
+      ],
+      "side_b_source_ids": [
+        "source_id_5"
+      ],
+      "treatment_a": "TZDs",
+      "treatment_b": "Dopamine receptor agonists"
+    },
+    {
+      "detail": "One source recommends TZDs for adults with type 2 diabetes and overweight, while another source suggests nsMRAs for adults with type 2 diabetes and chronic kidney disease.",
+      "id": "tc-7",
+      "kind": "population_mismatch",
+      "severity": "medium",
+      "side_a_source_ids": [
+        "source_id_1"
+      ],
+      "side_b_source_ids": [
+        "source_id_6"
+      ],
+      "treatment_a": "TZDs",
+      "treatment_b": "Nonsteroidal mineralocorticoid receptor antagonists (nsMRAs)"
     }
   ],
   "stats": {
-    "document_count": 10,
-    "entity_count": 3,
-    "claim_count": 11,
-    "contradiction_count": 3,
-    "timeline_event_count": 20,
-    "treatment_count": 6,
-    "treatment_conflict_count": 5,
-    "guideline_event_count": 3,
-    "source_count": 10,
+    "document_count": 16,
+    "entity_count": 5,
+    "claim_count": 21,
+    "contradiction_count": 0,
+    "timeline_event_count": 33,
+    "treatment_count": 13,
+    "treatment_conflict_count": 7,
+    "guideline_event_count": 8,
+    "source_count": 16,
     "compiled_passes": [
       "application-ir",
       "citation-quality-ir",
       "claim-ir",
+      "clinical-knowledge-artifact",
       "contradiction-ir",
       "entity-ir",
       "evidence-ir",
@@ -1087,6 +1774,7 @@
       "ontology-ir",
       "provenance-ir",
       "reasoning-ir",
+      "relations-ir",
       "research-knowledge-artifact",
       "semantic-ir",
       "timeline-ir",
@@ -1096,14 +1784,14 @@
   },
   "clinical_summary": {
     "objective": "Type 2 diabetes management",
-    "treatments_total": 6,
-    "treatments_graded_A": 3,
-    "treatments_graded_B": 3,
-    "treatments_graded_C": 0,
+    "treatments_total": 13,
+    "treatments_graded_A": 1,
+    "treatments_graded_B": 5,
+    "treatments_graded_C": 7,
     "treatments_graded_D": 0,
-    "treatment_conflicts": 5,
-    "guideline_events": 3,
-    "sources": 10,
-    "corpus_confidence": 0.581
+    "treatment_conflicts": 7,
+    "guideline_events": 8,
+    "sources": 16,
+    "corpus_confidence": 0.76
   }
 }

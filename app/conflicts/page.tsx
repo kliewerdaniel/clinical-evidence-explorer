@@ -1,14 +1,17 @@
 'use client';
+import { Heading, Text } from '@astryxdesign/core';
 import ConflictsView from '../../components/ConflictsView';
 import Sidebar from '../../components/Sidebar';
 export default function Page() {
   return (
-    <div className="flex min-h-screen">
+    <div style={{display:'flex', minHeight:'100vh'}}>
       <Sidebar />
-      <main className="grid-bg flex-1 overflow-auto p-8">
-        <h1 className="mb-1 text-2xl font-semibold tracking-tight">Treatment Conflicts</h1>
-        <p className="mb-6 text-sm text-muted-foreground">Compiled from your clinical corpus.</p>
-        <ConflictsView />
+      <main style={{flex:1, overflow:'auto', padding:'32px', maxWidth:1200, margin:'0 auto', width:'100%'}}>
+        <Heading level={1} style={{marginBottom:4}}>Treatment Conflicts</Heading>
+        <Text type="supporting" color="secondary">Compiled from your clinical corpus.</Text>
+        <div style={{marginTop:24}}>
+          <ConflictsView />
+        </div>
       </main>
     </div>
   );

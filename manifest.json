@@ -1,6 +1,7 @@
 {
   "name": "Clinical Evidence Explorer",
   "generated_from": "clinical-knowledge-artifact",
+  "design_system": "astryx",
   "renders": [
     "overview",
     "treatments",

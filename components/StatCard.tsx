@@ -1,13 +1,11 @@
 'use client';
-import { Card, CardContent } from './ui/card';
+import { Card, Heading, Text } from '@astryxdesign/core';
 export function StatCard({ label, value, sub }: { label: string; value: string | number; sub?: string }) {
   return (
-    <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-      <div className="p-5">
-        <div className="text-3xl font-bold tracking-tight">{value}</div>
-        <div className="text-sm text-muted-foreground">{label}</div>
-        {sub && <div className="mt-1 text-xs text-muted-foreground">{sub}</div>}
-      </div>
-    </div>
+    <Card variant="muted" style={{padding:16}}>
+      <Heading level={2} style={{marginBottom:4}}>{value}</Heading>
+      <Text type="supporting" color="secondary">{label}</Text>
+      {sub && <Text type="supporting" color="secondary" style={{marginTop:4, fontSize:12}}>{sub}</Text>}
+    </Card>
   );
 }

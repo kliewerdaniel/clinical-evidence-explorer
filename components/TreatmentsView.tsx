@@ -1,46 +1,46 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Input } from '../components/ui/input';
-function gcls(g:string){ if(g==='A') return 'bg-green-100 text-green-800 border-green-300'; if(g==='B') return 'bg-blue-100 text-blue-800 border-blue-300'; if(g==='C') return 'bg-amber-100 text-amber-800 border-amber-300'; return 'bg-red-100 text-red-800 border-red-300'; }
-function evLookup(a:any, txId:string){ return (a.evidence||[]).find((e:any)=>e.id===txId) || {}; }
+import { Card, Heading, Text, Badge, Button, TextInput, Grid } from '@astryxdesign/core';
+function gradeVariant(g){ if(g==='A') return 'success'; if(g==='B') return 'info'; if(g==='C') return 'warning'; return 'error'; }
+function evLookup(a, txId){ return (a.evidence||[]).find((e)=>e.id===txId) || {}; }
 export default function TreatmentsView() {
-  const [a, setA] = useState<any>(null);
+  const [a, setA] = useState(null);
   const [q, setQ] = useState(''); const [fg, setFg] = useState('all');
   useEffect(() => { fetch('/api/artifact').then(r => r.json()).then(setA); }, []);
-  const txs = useMemo(()=>{ const t=(a?.treatments||[]); return t.filter((x:any)=> (fg==='all'||(evLookup(a,x.id).grade||'').toUpperCase()===fg) && (q===''|| (x.name||'').toLowerCase().includes(q.toLowerCase()) || (x.indication||'').toLowerCase().includes(q.toLowerCase())) ); }, [a,q,fg]);
-  if (!a) return (<div className="text-sm text-muted-foreground">Loading...</div>);
+  const txs = useMemo(()=>{ const t=(a?.treatments||[]); return t.filter((x)=> (fg==='all'||(evLookup(a,x.id).grade||'').toUpperCase()===fg) && (q===''|| (x.name||'').toLowerCase().includes(q.toLowerCase()) || (x.indication||'').toLowerCase().includes(q.toLowerCase())) ); }, [a,q,fg]);
+  if (!a) return (<Text type="supporting">Loading...</Text>);
   const grades = ['A','B','C','D'];
   return (
     <div>
-      <div className="mb-4 flex flex-wrap items-center gap-2">
-        <Input placeholder="search treatments..." value={q} onChange={e=>setQ(e.target.value)} className="max-w-xs" />
-        <button onClick={()=>setFg('all')} className={fg==='all'?'rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground':'rounded-full border px-3 py-1 text-xs'}>all</button>
-        {grades.map((g:any)=>(<button key={g} onClick={()=>setFg(g)} className={fg===g?'rounded-full bg-primary px-3 py-1 text-xs text-primary-foreground':'rounded-full border px-3 py-1 text-xs'}>{g}</button>
+      <div style={{display:'flex', flexWrap:'wrap', alignItems:'center', gap:8, marginBottom:16}}>
+        <TextInput label="Search treatments" value={q} onChange={(e)=>setQ(e.target.value)} isLabelHidden />
+        <Button variant={fg==='all'?'primary':'secondary'} size="sm" onClick={()=>setFg('all')}>all</Button>
+        {grades.map((g)=>(<Button key={g} variant={fg===g?'primary':'secondary'} size="sm" onClick={()=>setFg(g)}>{g}</Button>
       ))}
       </div>
-      <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
-        {txs.map((t:any,i:number)=>{
+      <Grid columns={2} gap={3}>
+        {txs.map((t,i)=>{
           const ev = evLookup(a, t.id); const grade = (ev.grade||'').toUpperCase();
           return (
-          <div key={i} className="rounded-lg border bg-card text-card-foreground shadow-sm">
-            <div className="flex flex-col space-y-1 p-5">
-              <h3 className="flex items-center gap-2 text-base font-semibold leading-none tracking-tight">{t.name}<Badge className={gcls(grade)}>{grade||'—'}{ev.score!=null && ' · '+Math.round(ev.score*100)+'%'}</Badge></h3>
+          <Card key={i} variant="default" style={{padding:16}}>
+            <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:8}}>
+              <Heading level={3}>{t.name}</Heading>
+              <Badge variant={gradeVariant(grade)} label={grade||'—'} />
             </div>
-            <div className="space-y-1 p-5 pt-0 text-sm">
-              {t.class && <div><span className="text-muted-foreground">Class: </span>{t.class}</div>}
-              {t.indication && <div><span className="text-muted-foreground">Indication: </span>{t.indication}</div>}
-              {t.population && <div><span className="text-muted-foreground">Population: </span>{t.population}</div>}
-              {ev.recommendation && <div className="rounded-md border-l-2 border-accent bg-muted/40 p-2">{ev.recommendation}</div>}
-              {t.guideline_refs?.length>0 && <div className="flex flex-wrap gap-1">{t.guideline_refs.map((r:any,k:number)=><Badge key={k}>{r}</Badge>)}</div>}
-              {t.source_ids?.length>0 && <div className="text-xs text-muted-foreground">sources: {t.source_ids.join(', ')}</div>}
+            <div style={{marginTop:8, display:'flex', flexDirection:'column', gap:4}}>
+              {t.class && <Text type="supporting"><span style={{color:'var(--color-text-secondary,#687076)'}}>Class: </span>{t.class}</Text>}
+              {t.indication && <Text type="supporting"><span style={{color:'var(--color-text-secondary,#687076)'}}>Indication: </span>{t.indication}</Text>}
+              {t.population && <Text type="supporting"><span style={{color:'var(--color-text-secondary,#687076)'}}>Population: </span>{t.population}</Text>}
+              {ev.recommendation && <div style={{borderLeft:'3px solid var(--color-border-accent,#3b82f6)', background:'var(--color-background-muted,#f1f3f5)', padding:8, borderRadius:6, marginTop:4}}>{ev.recommendation}</div>}
+              {ev.score!=null && <Text type="supporting" color="secondary" style={{marginTop:4}}>Evidence score: {Math.round(ev.score*100)}%</Text>}
+              {t.guideline_refs?.length>0 && <div style={{display:'flex', flexWrap:'wrap', gap:4, marginTop:4}}>{t.guideline_refs.map((r,k)=><Badge key={k} variant="neutral" label={r} />)}</div>}
+              {t.source_ids?.length>0 && <Text type="supporting" color="secondary" style={{fontSize:12, marginTop:4}}>sources: {t.source_ids.join(', ')}</Text>}
             </div>
-          </div>
-          );
-        })}}
-        {txs.length===0 && <div className="text-sm text-muted-foreground">No treatments.</div>}
-      </div>
+          </Card>
+          );})
+        }
+        {txs.length===0 && <Text type="supporting">No treatments.</Text>}
+      </Grid>
     </div>
   );
 }
